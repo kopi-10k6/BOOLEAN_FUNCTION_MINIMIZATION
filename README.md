@@ -38,16 +38,23 @@ Hardware – PCs, Cyclone II , USB flasher
 Developed by:KOPIGA N
 RegisterNumber: 212225220053*/
 
+```
+module de2 (a,b,c,d,w,x,y,z,f1,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+assign f1 = ~a&~b&~c&~d | a&~c&~d | ~b&c&~d | ~a&b&c&d | b&~c&d;
+assign f2 = x&~y&z | ~x&~y&z | ~w&x&y | w&~x&y | w&x&y;
+endmodule
+```
 
 **RTL realization**
-
 **Output:**
-![alt text](<Screenshot 2026-05-21 135820.png>)
-**RTL**
-![alt text](<Screenshot 2026-05-21 141204.png>)
-**Timing Diagram**
-![alt text](<Screenshot 2026-05-21 141421.png>)
-**Result:**
+<img width="513" height="502" alt="image" src="https://github.com/user-attachments/assets/59dd9e76-a44e-4470-be39-5efb224ec9be" />
 
+**RTL**
+**Timing Diagram**
+<img width="823" height="407" alt="image" src="https://github.com/user-attachments/assets/54c6e606-7a32-4131-8f1b-f190fcc627d3" />
+
+**Result:**
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
 
